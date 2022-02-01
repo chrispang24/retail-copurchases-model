@@ -1,0 +1,1 @@
+{"customer": 10, "date": "2017.04.06 12:09:32", "itemList": [{"item": "ITEM_CODE_1", "price": 1.88, "quantity": 1.0}, {"item": "ITEM_CODE_2", "price": 0.99, "quantity": 1.0}, {"item": "ITEM_CODE_3", "price": 1.79, "quantity": 1.0}], "store": "0001"}

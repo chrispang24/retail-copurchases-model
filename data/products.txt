@@ -1,0 +1,3 @@
+ITEM_CODE_1 M0001   Item 1 Description
+ITEM_CODE_2	M0002	Item 2 Description
+ITEM_CODE_3	M0003	Item 3 Description
