@@ -1,0 +1,9 @@
+# Configuration for baseline recommendation model
+path:
+  products_src: "data/products.txt"
+  transactions_src: "data/transactions.txt"
+  recommendations_store: "output/recommendations.csv.bz2"
+
+# Dask cluster parameters
+num_workers: 6
+partitions_per_worker: 8
