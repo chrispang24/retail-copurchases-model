@@ -23,11 +23,11 @@ Data files (i.e. products.txt, transactions.txt) should be stored in 'data' fold
 ## Model Building
 
 Steps for generating co-purchase-based recommendations:
-1. Read source “product” and “transaction” files into Dask data structures.
+1. Read source "product" and "transaction" files into Dask data structures.
 2. Generate co-purchase pairs for all items within a transaction.
 3. Flatten co-purchase pairs into a single data structure (including both variants of a pairing: A,B and B,A).
 4. Compute frequency for each pair, then grouping by product A, limit to top 5 pairings with highest co-purchase frequencies.
-5. Merge with “product” data structure to retrieve product name details for top-pairing products.
+5. Merge with "product" data structure to retrieve product name details for top-pairing products.
 6. Persist resulting recommendations to file store.
 
 ## Model Serving (Development)
@@ -40,11 +40,10 @@ Steps for serving recommendations for specified product IDs:
 ## Model Deployment to Production
 
 For improved performance, the following modifications should be made:
-1. Use a workflow orchestrator such as Airflow to coordinate scheduled execution of tasks within ‘RecommenderBuilder’.
+1. Use a workflow orchestrator such as Airflow to coordinate scheduled execution of tasks within `RecommenderBuilder`.
 a. Parameterize source file locations, cluster resources, and destination file store as orchestrator variables.
 2. Save recommendation results to a distributed file store or database.
-3. Serve model results from a containerized recommender microservice that reads computed recommendation into an in-
-memory key-value store such as Redis or Memcached, allowing for quick retrieval via an API
+3. Serve model results from a containerized recommender microservice that reads computed recommendation into an in-memory key-value store such as Redis or Memcached, allowing for quick retrieval via an API
 4. Deploy and provision required cloud infrastructure using tools such as Terraform or CloudFormation. Updates via CI/CD.
 
 ## Project Usage
